@@ -1,0 +1,55 @@
+@import "@/assets/styles/variables.scss";
+@import "@/assets/styles/default.scss";
+@import "@/assets/styles/transitions.scss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ms-option-bg-selected: #abc43f;
+  --ms-spinner-color: #abc43f;
+  --ms-tag-bg: #abc43f;
+  --ms-ring-color: #abc43f30;
+  --ms-option-bg-selected-pointed: #8ca034;
+}
+
+input {
+  margin: 0 auto;
+  width: 100%;
+  outline: none;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 1rem;
+  min-height: calc(
+    var(--ms-border-width, 1px) * 2 + var(--ms-font-size, 1rem) * var(--ms-line-height, 1.375) + var(--ms-py, 0.5rem) *
+      2
+  );
+  padding: 0 0.875rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  border: none;
+
+  &:focus {
+    outline: none !important;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}

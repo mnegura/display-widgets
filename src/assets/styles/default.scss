@@ -1,0 +1,122 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $dark-gray;
+  padding: 20px;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: $background-color;
+}
+
+// #region Buttons
+.main-btn {
+  background: $main-gray 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: min-content;
+  min-height: 40px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten($color: $main-gray, $amount: 5%);
+  }
+
+  &:disabled {
+    opacity: 0.75;
+    cursor: default !important;
+    pointer-events: none;
+  }
+
+  &--green {
+    @extend .main-btn;
+
+    background: $main-green 0% 0% no-repeat padding-box;
+
+    &:hover {
+      background-color: lighten($color: $main-green, $amount: 5%);
+    }
+  }
+
+  &--orange {
+    @extend .main-btn;
+
+    background: $main-orange 0% 0% no-repeat padding-box;
+
+    &:hover {
+      background-color: lighten($color: $main-orange, $amount: 5%);
+    }
+  }
+
+  &--red {
+    @extend .main-btn;
+
+    background: $main-red 0% 0% no-repeat padding-box;
+
+    &:hover {
+      background-color: lighten($color: $main-red, $amount: 5%);
+    }
+  }
+
+  &--gray {
+    @extend .main-btn;
+
+    background: $main-gray 0% 0% no-repeat padding-box;
+
+    &:hover {
+      background-color: lighten($color: $main-gray, $amount: 5%);
+    }
+  }
+}
+
+.btn-close {
+  height: 14px;
+  width: 14px;
+  position: relative;
+
+  &:hover {
+    &::after,
+    &::before {
+      background-color: darken($main-orange, 5%);
+      height: 2px;
+    }
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    width: 16px;
+    height: 2px;
+    background-color: $main-orange;
+    position: absolute;
+    top: 3px;
+    left: 0;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(135deg);
+  }
+}
+// #endregion Buttons
+
+.form-label {
+  font-size: 16px;
+  color: $main-gray;
+  line-height: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  flex: 1;
+}

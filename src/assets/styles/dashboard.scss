@@ -1,0 +1,31 @@
+@import "@/assets/styles/variables.scss";
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .widget-wrapper {
+    display: grid;
+    gap: 0.5em;
+    grid-auto-rows: 10em;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+    overflow-y: auto;
+    padding-bottom: 20px;
+
+    .widget-item {
+      border-radius: 10px;
+      border: 1px solid rgba($main-gray, 0.2);
+      padding: 10px;
+      box-shadow: 0px 4px 6px 0px rgba(50, 50, 93, 0.11), 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+
+      &__title {
+        max-width: 70%;
+        display: block;
+        font-size: 1em;
+        font-weight: bold;
+      }
+    }
+  }
+}
